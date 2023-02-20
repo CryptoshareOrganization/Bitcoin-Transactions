@@ -1,5 +1,7 @@
-# This is a sample code for sending bitcoin with Javascript
+# This is a bitcoin payment model
 
 
-You can find the complete tutorial on how every part of works in this article [How to send bitcoin to a friend with javascript]("https://blog.logrocket.com")
+
+
+
 
