@@ -58,7 +58,7 @@ module.exports = sendPayment = async (fruit_type, quantity) => {
         method: 'GET',
         headers: {
           "Content-Type": "application/json",
-          'x-api-key': 'a869f21056f3330f5ae1faf63ab67d57fe0fbee7'
+          'x-api-key': 'put your api key here'
         }
       }
     );
