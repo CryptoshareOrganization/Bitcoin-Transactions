@@ -19,7 +19,7 @@ The steps included in the code include:
 ## Challenges when working on the code:
 1. Finding an api with the right inputs required by bitcore-lib to build a transaction.
 2. The Bitcoin testnet is quite slow to confirm transactions.
-3. Tested out other libraries before trying out Bitocore-lib. Turns out most are depreciated.
+3. Tested out other libraries before trying out Bitcore-lib. Turns out most are depreciated.
 
 
 
