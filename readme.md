@@ -140,7 +140,8 @@ RSK works by using a two-way peg system to connect the Bitcoin and RSK blockchai
 
 One of the key benefits of RSK is its compatibility with the existing Bitcoin infrastructure, including wallets, exchanges, and mining pools. This allows for seamless integration with the Bitcoin network, while also providing access to a large user base and network of developers.
 
-## Creating a Model for Bitcoin Transactions in Python
+## Creating a Model for Bitcoin Transactions
+
 Creating smart contracts for financial transactions on the Bitcoin network can be done using the Bitcoin Script language or through the use of third-party tools and libraries. However, since the Bitcoin Script language is limited in functionality and can be challenging for those unfamiliar with it, many developers choose to use a more high-level programming language, such as Python.
 
 One such tool for creating smart contracts in Python for the Bitcoin network is the "bitcoin-python" library, which provides a Python interface to the Bitcoin network and allows developers to write and deploy smart contracts on the network.
