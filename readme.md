@@ -356,7 +356,7 @@ input index
 
 # Bitcoin Payment Model.
 
-The code is for a fruit shop model where a user can buy a fruit and choose the quantity and then pay with Bitcoin.
+The code in this repo is for a fruit shop model where a user can buy a fruit and choose the quantity and then pay with Bitcoin.
 
 The code teaches how to construct a bitcoin transaction by simulation a real bitcoin transaction on the testnet.
 
