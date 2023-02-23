@@ -377,6 +377,25 @@ The steps included in the code include:
 2. The Bitcoin testnet is quite slow to confirm transactions.
 3. Tested out other libraries before trying out Bitcore-lib. Turns out most are depreciated.
 
+Conclusion:
+Anade ~ Hours of Research were dedicated into adding messages within Bitcoin Transactions. The purpose of the messages are to add identifying information for each transaction. This will make it easier for accounting and give exact details of a transaction.
+
+Example: A grocery store sells 100,000 apples with 2 different types of Apples (Red & Green). Both types of Apples will have a separate wallet to store and record transactions.
+
+Apple 1 = Bitcoin Wallet 1 = 40000 Red Apples Sold
+
+Apple 2 = Bitcoin Wallet 2 = 60000 Green Apples Sold
+
+Sources: https://trezor.io/learn/a/use-op_return-in-trezor-suite-app
+
+https://en.bitcoin.it/wiki/OP_RETURN
+
+https://cloudinvent.com/blog/custom-data-in-bitcoin-blockchain-transaction/
+
+https://nftnow.com/guides/bitcoin-nfts-ordinals-inscriptions-explained-finding-buying-more/
+
+https://link.medium.com/fIuNtUhLDxb
+
 
 
 
