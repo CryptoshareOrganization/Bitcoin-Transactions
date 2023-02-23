@@ -20,7 +20,9 @@ The scriptPubKey specifies the conditions that must be satisfied for the transac
 
 Bitcoin Script, however, was designed to be limited in scope to avoid the complexities that come with making the language turing Complete. As of today, the most common type of smart contracts deployed on the Bitcoin network are:
 
+
 ### Pay-to-Public-Key-Hash (P2PKH)
+
 Pay-to-Public-Key-Hash (P2PKH) is a common type of transaction in the Bitcoin network. It is used to send funds to a Bitcoin address, which is derived from a public key hash.
 
 A public key hash is a hash of a public key that is used to identify a specific address on the Bitcoin network. When someone wants to send bitcoins to an address, they create a transaction that includes the public key hash of the recipient in the output script.
@@ -35,6 +37,7 @@ Example of a P2PKH script in Bitcoin Script:
 
 This script specifies that the transaction can only be spent by someone who provides a digital signature using the private key corresponding to the provided public key hash.
 
+
 ### Multi-Sig Transaction
 
 A multi-sig transaction is a type of transaction in the Bitcoin network that requires more than one signature to be considered valid. It is used to add an extra layer of security to transactions by requiring multiple parties to sign off on a transaction before it can be added to the blockchain.
@@ -45,6 +48,7 @@ For example, if a 2-of-3 multi-sig transaction is created, then two of the three
 
 Example of a 2-of-2 multi-sig script in Bitcoin Script:
 > OP_2 <public key 1> <public key 2> OP_2 OP_CHECKMULTISIG
+
 
 ### Time-Locked Transactions
 
@@ -58,7 +62,9 @@ Example of a 2-of-2 multi-sig script in Bitcoin Script:
 
 > OP_2 <public key 1> <public key 2> OP_2 OP_CHECKMULTISIG
 
+
 ## Bitcoin Script Language Limitations
+
 Lack of Turing completeness: Bitcoin script is intentionally designed to be simple and limited in order to maintain security and avoid potential vulnerabilities. As a result, it is not Turing complete, which means it cannot handle certain types of computations and logical operations.
 
 Limited functionality: Bitcoin script is primarily designed for simple transaction operations, such as verifying signatures and checking if a certain amount of funds are available. It does not support more complex operations, such as looping and recursion, that are available in other programming languages.
@@ -79,6 +85,7 @@ Increased smart contract functionality.
 Enhanced scalability.
 
 ### Layer 1s 
+
 Other solutions to Bitcoin smart contract limitations include layer 1s and layer 2s that are built to rely on the Bitcoin network. 
 
 A layer 1 is a blockchain that operates as a standalone, self-sufficient network. It is responsible for maintaining its own ledger, validating transactions, and executing smart contracts, all without relying on any external systems or networks.
@@ -86,6 +93,7 @@ A layer 1 is a blockchain that operates as a standalone, self-sufficient network
 In a Layer 1 blockchain, all nodes in the network have access to the same information and participate in the consensus process to maintain the network's integrity and security. Examples of Layer 1 blockchains include Bitcoin, Ethereum, and Cardano.
 
 ### The Stack Blockchain | A layer One?
+
 Stacks, previously known as Blockstack, is a decentralized computing network that allows developers to build decentralized applications (dApps) on top of the Bitcoin blockchain. 
 
 The Stacks blockchain is anchored to the Bitcoin blockchain, which means that it uses the security of the Bitcoin network to provide a secure and reliable platform for building and running decentralized applications. Stacks uses a consensus mechanism called Proof of Transfer (PoX) that allows STX token holders to participate in the consensus process and earn rewards for securing the network.
@@ -104,7 +112,9 @@ Interoperability: Clarity is designed to be interoperable with other blockchain 
 
 Decentralization: Stacks is a decentralized network, and Clarity is designed to enable decentralized applications and smart contracts that can run on the network without the need for intermediaries or centralized infrastructure.
 
+
 ### Layer 2
+
 Layer blockchains are scaling solutions that operate on top of a Layer 1 blockchain. They are designed to address some of the scalability limitations of Layer 1 blockchains, such as slow transaction speeds and high fees, by processing transactions off-chain and settling them on the Layer 1 blockchain.
 
 The Lighntinig network is an example of a layer 2 chain. 
@@ -119,7 +129,9 @@ Scalability: The Lightning Network can handle a large number of transactions per
 
 Privacy: Lightning transactions are private and do not require the same level of transparency as on-chain transactions, which provides greater privacy and security for users.
 
+
 ## Sidechains
+
 Sidechains are a type of blockchain that operates as a separate network but is connected to the main blockchain network, also known as the parent chain. They are designed to allow for the transfer of digital assets or data between different blockchains, while maintaining the security and integrity of both chains.
 
 To make Bitcoin turing complete and allow for more complex smart contracts and scalability, the Rootstock smart contract platform was created.
@@ -354,6 +366,7 @@ output count
 outputs hash
 input index
 
+
 # Bitcoin Payment Model.
 
 The code in this repo is for a fruit shop model where a user can buy a fruit and choose the quantity and then pay with Bitcoin.
@@ -377,7 +390,8 @@ The steps included in the code include:
 2. The Bitcoin testnet is quite slow to confirm transactions.
 3. Tested out other libraries before trying out Bitcore-lib. Turns out most are depreciated.
 
-Conclusion:
+
+## Conclusion:
 Anade ~ Hours of Research were dedicated into adding messages within Bitcoin Transactions. The purpose of the messages are to add identifying information for each transaction. This will make it easier for accounting and give exact details of a transaction.
 
 Example: A grocery store sells 100,000 apples with 2 different types of Apples (Red & Green). Both types of Apples will have a separate wallet to store and record transactions.
@@ -386,7 +400,13 @@ Apple 1 = Bitcoin Wallet 1 = 40000 Red Apples Sold
 
 Apple 2 = Bitcoin Wallet 2 = 60000 Green Apples Sold
 
-Sources: https://trezor.io/learn/a/use-op_return-in-trezor-suite-app
+The challenges in achieveing this lies in the fact that Bitcoin as a blockchain was not designed to support thw storage of non-transaction data. Over the past years, coders and miners have found a way to store messages on-chain with everything from "Hello world" messages to marriage proposals being recorded on the blockchain. This is through the use of the OP_RETURN script, an opcode that allows the embedding of messages on the blockchain at the cost of making the unpent outputs used to build the transactions invalid.
+
+This means in a financial sense, including an opcode to recode the purchases in a Grocery Store may not be practical as the Bitcoins sent in the transaction will be rendered unspendable due to the inclusion of the OP_RETURN code in the transaction output. 
+
+In addition, if it were indeed possible to store non-transaction data on the Bitcoin blockchain, more issues such as costly fees would prevent it from being viable in the business sense. The more additional data is included in a transaction, the higher the transaction fees. Another issue becomes the sprialing of storage requirements for those running Bitcoin nodes as they would have to store all the extra data.
+
+Sources: https://trezor.io/learn/a/use-op_return-in-trezor-suite-app is
 
 https://en.bitcoin.it/wiki/OP_RETURN
 
