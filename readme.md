@@ -401,11 +401,18 @@ Apple 1 = Bitcoin Wallet 1 = 40000 Red Apples Sold
 
 Apple 2 = Bitcoin Wallet 2 = 60000 Green Apples Sold
 
-The challenges in achieveing this lies in the fact that Bitcoin as a blockchain was not designed to support thw storage of non-transaction data. Over the past years, coders and miners have found a way to store messages on-chain with everything from "Hello world" messages to marriage proposals being recorded on the blockchain. This is through the use of the OP_RETURN script, an opcode that allows the embedding of messages on the blockchain at the cost of making the unpent outputs used to build the transactions invalid.
+The challenges in achieveing this lies in the fact that Bitcoin as a blockchain was not designed to support the storage of non-transaction data. Bitcoin transactions can have messages inscribed within them as a way to store messages on-chain with everything from "Hello world" messages to marriage proposals being recorded on the blockchain. The messages are put within the transaction and then decoded using decoders.
 
-This means in a financial sense, including an opcode to recode the purchases in a Grocery Store may not be practical as the Bitcoins sent in the transaction will be rendered unspendable due to the inclusion of the OP_RETURN code in the transaction output. 
+Examples of Decoder: https://live.blockcypher.com/btc/decodetx/
 
-In addition, if it were indeed possible to store non-transaction data on the Bitcoin blockchain, more issues such as costly fees would prevent it from being viable in the business sense. The more additional data is included in a transaction, the higher the transaction fees. Another issue becomes the sprialing of storage requirements for those running Bitcoin nodes as they would have to store all the extra data.
+![image](https://user-images.githubusercontent.com/104532970/221340704-1dc487b4-03a5-425f-aaec-1409b327d662.png)
+
+The Bitcoin Transaction Script will be added into the decoder and the decoder gives us information about the transaction.
+
+![image](https://user-images.githubusercontent.com/104532970/221340719-1686a461-d8ce-4521-8185-fa0844addd57.png)
+
+The mission is to customize some of the data within the Bitcoin Transaction Script to show that Apples were sold and at what price. The obstacles are currently our research has found that when we do that the Bitcoin becomes an NFT, making it unspendable.
+
 
 Sources: 
 
