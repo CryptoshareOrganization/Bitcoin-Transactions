@@ -413,6 +413,19 @@ The Bitcoin Transaction Script will be added into the decoder and the decoder gi
 
 The mission is to customize some of the data within the Bitcoin Transaction Script to show that Apples were sold and at what price. The obstacles are currently our research has found that when we do that the Bitcoin becomes an NFT, making it unspendable.
 
+Transaction ID: 0c3214e90abfda656f1176e7eae232b4596a982230d874a97feba8ffe6f84e6d
+
+# Read Transaction Here: https://blockexplorer.one/ (insert above Transaction ID)
+
+![image](https://user-images.githubusercontent.com/104532970/221341366-1de11ea1-9e66-4652-8d7e-4da8b7da98d4.png)
+
+# We use the HEX codes to tell us the details of transaction, using the website decoder below:
+
+https://live.blockcypher.com/btc/decodetx/
+
+# Refer here to learn more about the info given in a transaction: https://en.bitcoin.it/wiki/Script#Constants
+
+
 
 Sources: 
 
