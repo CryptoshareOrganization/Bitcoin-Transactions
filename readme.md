@@ -4,7 +4,7 @@ We dive into Smart Contracts for financial transactions using Bitcoin
 GITHUB LINK: https://github.com/CRYPTOSHAREBANQ/Bitcoin-Transactions/blob/main/src/send.bitcoin.js
 
 
-## Detailed Report With Code Examples Of Best Way (Most Secure Way/Tamperproof) To Create Bitcoin Smart Contracts For Financial Transactions
+## Detailed Report With Code Examples Of Best Way (Most Secure Way/Tamperproof) To Create and Record Info within Bitcoin Smart Contracts For Financial Transactions
 
 Ever since the introduction of Bitcoin by Satoshi Nakamoto in 2008. Bitcoin has grown into a dominant digital currency and sparked the introduction of digital currencies like Ethereum, Litecoin, XRP, Dogecoin and many more.
 
