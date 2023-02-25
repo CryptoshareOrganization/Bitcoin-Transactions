@@ -407,7 +407,9 @@ This means in a financial sense, including an opcode to recode the purchases in 
 
 In addition, if it were indeed possible to store non-transaction data on the Bitcoin blockchain, more issues such as costly fees would prevent it from being viable in the business sense. The more additional data is included in a transaction, the higher the transaction fees. Another issue becomes the sprialing of storage requirements for those running Bitcoin nodes as they would have to store all the extra data.
 
-Sources: https://trezor.io/learn/a/use-op_return-in-trezor-suite-app is
+Sources: 
+
+https://trezor.io/learn/a/use-op_return-in-trezor-suite-app 
 
 https://en.bitcoin.it/wiki/OP_RETURN
 
