@@ -73,6 +73,7 @@ export const Fruitpayment = () => {
   const [transactionId, setTransactionId] = useState("");
 
   const [purchaseSuccess, setPurchaseSuccess] = useState(false);
+ const [isBuying, setIsBuying] = useState<boolean>(false);
 
 
   const increment = () => {
@@ -95,11 +96,13 @@ export const Fruitpayment = () => {
 
 
   const sendFruitDetails = async () => {
-    const response = await fetch(` https://btcbackend.onrender.com/generate?fruit_type=${fruitType}&quantity=${count}`, { method: "GET" })
+    setIsBuying(true); // disable the Buy Fruit button
+    const response = await fetch(`https://btcbackend.onrender.com/generate?fruit_type=${fruitType}&quantity=${count}`, { method: "GET" })
     const data = await response.json();
     setTransactionId(data.transactionId);
     console.log(transactionId)
     setPurchaseSuccess(true);
+    setIsBuying(false); // enable the button after the response is returned
 
 }
 
@@ -187,8 +190,9 @@ const handleClose = () => {
                   <Button
                     sx={{ m: 4, backgroundColor: '#f2a900'}}
                      variant="contained"
-                    onClick={sendFruitDetails}>
-                    "Buy Fruit"
+                    onClick={sendFruitDetails}
+                    disabled={isBuying}>
+                    {isBuying ? <CircularProgress color="primary" size={35} /> : "Buy Fruit"}
                   </Button>
               </Box>
               <Snackbar
@@ -199,7 +203,7 @@ const handleClose = () => {
                   You've succesfully purchased {count} {fruitType}
                 </Alert>
               </Snackbar>
-              <Box component="span" sx={{ color: "primary.main", fontSize: 20, mt: 1, fontWeight: "medium", fontFamily: 'Audiowide' }}>{transactionId}</Box>
+              <Box component="span" sx={{ color: "primary.main", fontSize: 20, mt: 1, fontWeight: "medium", fontFamily: 'Audiowide' }}>transactionId: {transactionId}</Box>
             </Box>
           </Box>
         </Box>
