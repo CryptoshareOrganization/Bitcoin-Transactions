@@ -78,7 +78,7 @@ export const Fruitpayment = () => {
 
   const increment = () => {
     if (count < 9) {
-      setCount((count) => count + 1)
+      setCount((count: any) => count + 1)
     }
   }
 
@@ -88,7 +88,7 @@ export const Fruitpayment = () => {
 
   const decrement = () => {
     if (count > 1) {
-      setCount((count) => count - 1)
+      setCount((count: any) => count - 1)
     }
   }
 

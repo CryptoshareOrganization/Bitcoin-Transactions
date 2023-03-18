@@ -1,5 +1,5 @@
 # BITCOIN SMART CONTRACTS
-We dive into Smart Contracts for financial transactions using Bitcoi
+We dive into Smart Contracts for financial transactions using Bitcoin
 
 Bitcoin Transaction Demonstration Video: https://www.loom.com/share/5e2c84759fdc4328a81d64520762933f
 
