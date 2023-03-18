@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/BitcoinTransactions/static/css/main.e2cd13a2.chunk.css",
+    "main.js": "/BitcoinTransactions/static/js/main.595affe3.chunk.js",
+    "main.js.map": "/BitcoinTransactions/static/js/main.595affe3.chunk.js.map",
+    "runtime-main.js": "/BitcoinTransactions/static/js/runtime-main.951ebfe9.js",
+    "runtime-main.js.map": "/BitcoinTransactions/static/js/runtime-main.951ebfe9.js.map",
+    "static/js/2.6806a6b4.chunk.js": "/BitcoinTransactions/static/js/2.6806a6b4.chunk.js",
+    "static/js/2.6806a6b4.chunk.js.map": "/BitcoinTransactions/static/js/2.6806a6b4.chunk.js.map",
+    "index.html": "/BitcoinTransactions/index.html",
+    "static/css/main.e2cd13a2.chunk.css.map": "/BitcoinTransactions/static/css/main.e2cd13a2.chunk.css.map",
+    "static/js/2.6806a6b4.chunk.js.LICENSE.txt": "/BitcoinTransactions/static/js/2.6806a6b4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.951ebfe9.js",
+    "static/js/2.6806a6b4.chunk.js",
+    "static/css/main.e2cd13a2.chunk.css",
+    "static/js/main.595affe3.chunk.js"
+  ]
+}
