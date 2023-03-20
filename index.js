@@ -168,7 +168,7 @@ app.get('/generate', async (request, response) => {
         res.on("end", function () {
           var body = Buffer.concat(chunks);
           var transactionId = JSON.parse(body.toString()).data.item.transactionId;
-          response.send({transactionId: `<a href='https://blockexplorer.one/bitcoin/testnet/tx/${transactionId}'>Click to View Transaction Details</a>`});
+          response.send(`${transactionId}`);
         });
       });
 
@@ -191,7 +191,7 @@ app.get('/generate', async (request, response) => {
 
     } else {
 
-      response.send("Another transaction is still in progress, try again later. <a href='https://blockexplorer.one/bitcoin/testnet/address/n3Hhyfpu4nrfEYLBtLVb7fruK8DrAgaKvL/unconfirmed'>Click to View Pending Transactions</a>")
+      response.send("Another transaction is still in progress.")
 
 
     }
