@@ -99,7 +99,7 @@ export const Fruitpayment = () => {
     setIsBuying(true); // disable the Buy Fruit button
     const response = await fetch(`https://bitcoinbackend.onrender.com/generate?fruit_type=${fruitType}&quantity=${count}`, { method: "GET" })
     const data = await response.json();
-    setTransactionId(data);
+    setTransactionId(data.transactionId);
     console.log(transactionId)
     setPurchaseSuccess(true);
     setIsBuying(false); // enable the button after the response is returned
