@@ -97,7 +97,7 @@ export const Fruitpayment = () => {
 
   const sendFruitDetails = async () => {
     setIsBuying(true); // disable the Buy Fruit button
-    const response = await fetch(`https://btcbackend.onrender.com/generate?fruit_type=${fruitType}&quantity=${count}`, { method: "GET" })
+    const response = await fetch(`https://bitcoinbackend.onrender.com/generate?fruit_type=${fruitType}&quantity=${count}`, { method: "GET" })
     const data = await response.json();
     setTransactionId(data.transactionId);
     console.log(transactionId)
@@ -195,15 +195,7 @@ const handleClose = () => {
                     {isBuying ? <CircularProgress color="primary" size={35} /> : "Buy Fruit"}
                   </Button>
               </Box>
-              <Snackbar
-                open={purchaseSuccess}
-                autoHideDuration={5000}
-                onClose={handleClose}>
-                <Alert onClose={handleClose} severity="success">
-                  You've succesfully purchased {count} {fruitType}
-                </Alert>
-              </Snackbar>
-              <Box component="span" sx={{ color: "primary.main", fontSize: 20, mt: 1, fontWeight: "medium", fontFamily: 'Audiowide' }}>transactionId: {transactionId}</Box>
+              <Box component="span" sx={{ color: "primary.main", fontSize: 20, mt: 1, fontWeight: "medium", fontFamily: 'Audiowide' }}>Response: {transactionId}</Box>
             </Box>
           </Box>
         </Box>
