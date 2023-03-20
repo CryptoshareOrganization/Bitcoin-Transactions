@@ -97,7 +97,7 @@ export const Fruitpayment = () => {
 
   const sendFruitDetails = async () => {
     setIsBuying(true); // disable the Buy Fruit button
-    const response = await fetch(`http://localhost:4000/generate?fruit_type=${fruitType}&quantity=${count}`, { method: "GET" })
+    const response = await fetch(`https://bitcoinbackend.onrender.com/generate?fruit_type=${fruitType}&quantity=${count}`, { method: "GET" })
     const responseText = await response.text(); 
     setTransactionId(responseText);
     console.log(transactionId)
