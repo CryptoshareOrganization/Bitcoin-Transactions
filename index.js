@@ -168,7 +168,7 @@ app.get('/generate', async (request, response) => {
         res.on("end", function () {
           var body = Buffer.concat(chunks);
           var transactionId = JSON.parse(body.toString()).data.item.transactionId;
-          response.send(`<a href='https://blockexplorer.one/bitcoin/testnet/tx/${transactionId}'>Click to View Transaction Details</a>`);
+          response.send({transactionId: `<a href='https://blockexplorer.one/bitcoin/testnet/tx/${transactionId}'>Click to View Transaction Details</a>`});
         });
       });
 
