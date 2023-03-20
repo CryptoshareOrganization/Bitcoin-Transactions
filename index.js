@@ -191,7 +191,7 @@ app.get('/generate', async (request, response) => {
 
     } else {
 
-      response.send("Another transaction is still in progress, try again later")
+      response.send("Another transaction is still in progress, try again later. Check <a href='https://blockexplorer.one/bitcoin/testnet/address/n3Hhyfpu4nrfEYLBtLVb7fruK8DrAgaKvL/unconfirmed'>https://blockexplorer.one/bitcoin/testnet/address/n3Hhyfpu4nrfEYLBtLVb7fruK8DrAgaKvL/unconfirmed</a>")
 
 
     }
