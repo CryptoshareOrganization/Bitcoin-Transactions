@@ -78,7 +78,7 @@ export const Fruitpayment = () => {
 
   const increment = () => {
     if (count < 9) {
-      setCount((count: any) => count + 1)
+      setCount((count) => count + 1)
     }
   }
 
@@ -88,7 +88,7 @@ export const Fruitpayment = () => {
 
   const decrement = () => {
     if (count > 1) {
-      setCount((count: any) => count - 1)
+      setCount((count) => count - 1)
     }
   }
 
@@ -97,9 +97,9 @@ export const Fruitpayment = () => {
 
   const sendFruitDetails = async () => {
     setIsBuying(true); // disable the Buy Fruit button
-    const response = await fetch(`https://bitcoinbackend.onrender.com/generate?fruit_type=${fruitType}&quantity=${count}`, { method: "GET" })
-    const data = await response.json();
-    setTransactionId(data.transactionId);
+    const response = await fetch(`http://localhost:4000/generate?fruit_type=${fruitType}&quantity=${count}`, { method: "GET" })
+    const responseText = await response.text(); 
+    setTransactionId(responseText);
     console.log(transactionId)
     setPurchaseSuccess(true);
     setIsBuying(false); // enable the button after the response is returned
@@ -195,6 +195,14 @@ const handleClose = () => {
                     {isBuying ? <CircularProgress color="primary" size={35} /> : "Buy Fruit"}
                   </Button>
               </Box>
+              {/* <Snackbar
+                open={purchaseSuccess}
+                autoHideDuration={5000}
+                onClose={handleClose}>
+                <Alert onClose={handleClose} severity="success">
+                  You've succesfully purchased {count} {fruitType}
+                </Alert>
+              </Snackbar> */}
               <Box component="span" sx={{ color: "primary.main", fontSize: 20, mt: 1, fontWeight: "medium", fontFamily: 'Audiowide' }}>Response: {transactionId}</Box>
             </Box>
           </Box>
